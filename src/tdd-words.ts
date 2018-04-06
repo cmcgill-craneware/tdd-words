@@ -1,11 +1,7 @@
 export class TddWords {
     wordCount(stringToCount: string): Number {
-        if (stringToCount === null) {
-            return 0;
-        }
-
         let isOnlyWhitespace = /^\s+$/.test(stringToCount);
-        if (isOnlyWhitespace) {
+        if (stringToCount === null && isOnlyWhitespace) {
             return 0;
         }
 
